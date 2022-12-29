@@ -1,9 +1,16 @@
 const sumAll = function(min, max) {
   let sum = 0;
-  for (i = min; i <= max; i++) {
-    sum += i;
+  if (min > max) {
+    for (i = max; i <= min; i++) {
+      sum += i;
+    }
+    return sum;
+  } else {
+    for (i = min; i <= max; i++) {
+      sum += i;
+    }
+    return sum;
   }
-  return sum;
 };
 
 // Do not edit below this line
